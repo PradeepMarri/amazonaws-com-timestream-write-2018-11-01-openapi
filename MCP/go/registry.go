@@ -1,0 +1,49 @@
+package main
+
+import (
+	"github.com/amazon-timestream-write/mcp-server/config"
+	"github.com/amazon-timestream-write/mcp-server/models"
+	tools_x_amz_target_timestream_20181101_untagresource "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_untagresource"
+	tools_x_amz_target_timestream_20181101_listtables "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_listtables"
+	tools_x_amz_target_timestream_20181101_createtable "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_createtable"
+	tools_x_amz_target_timestream_20181101_updatetable "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_updatetable"
+	tools_x_amz_target_timestream_20181101_deletetable "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_deletetable"
+	tools_x_amz_target_timestream_20181101_listdatabases "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_listdatabases"
+	tools_x_amz_target_timestream_20181101_resumebatchloadtask "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_resumebatchloadtask"
+	tools_x_amz_target_timestream_20181101_updatedatabase "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_updatedatabase"
+	tools_x_amz_target_timestream_20181101_describebatchloadtask "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_describebatchloadtask"
+	tools_x_amz_target_timestream_20181101_describetable "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_describetable"
+	tools_x_amz_target_timestream_20181101_listbatchloadtasks "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_listbatchloadtasks"
+	tools_x_amz_target_timestream_20181101_tagresource "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_tagresource"
+	tools_x_amz_target_timestream_20181101_describedatabase "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_describedatabase"
+	tools_x_amz_target_timestream_20181101_writerecords "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_writerecords"
+	tools_x_amz_target_timestream_20181101_createbatchloadtask "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_createbatchloadtask"
+	tools_x_amz_target_timestream_20181101_deletedatabase "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_deletedatabase"
+	tools_x_amz_target_timestream_20181101_createdatabase "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_createdatabase"
+	tools_x_amz_target_timestream_20181101_listtagsforresource "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_listtagsforresource"
+	tools_x_amz_target_timestream_20181101_describeendpoints "github.com/amazon-timestream-write/mcp-server/tools/x_amz_target_timestream_20181101_describeendpoints"
+)
+
+func GetAll(cfg *config.APIConfig) []models.Tool {
+	return []models.Tool{
+		tools_x_amz_target_timestream_20181101_untagresource.CreateUntagresourceTool(cfg),
+		tools_x_amz_target_timestream_20181101_listtables.CreateListtablesTool(cfg),
+		tools_x_amz_target_timestream_20181101_createtable.CreateCreatetableTool(cfg),
+		tools_x_amz_target_timestream_20181101_updatetable.CreateUpdatetableTool(cfg),
+		tools_x_amz_target_timestream_20181101_deletetable.CreateDeletetableTool(cfg),
+		tools_x_amz_target_timestream_20181101_listdatabases.CreateListdatabasesTool(cfg),
+		tools_x_amz_target_timestream_20181101_resumebatchloadtask.CreateResumebatchloadtaskTool(cfg),
+		tools_x_amz_target_timestream_20181101_updatedatabase.CreateUpdatedatabaseTool(cfg),
+		tools_x_amz_target_timestream_20181101_describebatchloadtask.CreateDescribebatchloadtaskTool(cfg),
+		tools_x_amz_target_timestream_20181101_describetable.CreateDescribetableTool(cfg),
+		tools_x_amz_target_timestream_20181101_listbatchloadtasks.CreateListbatchloadtasksTool(cfg),
+		tools_x_amz_target_timestream_20181101_tagresource.CreateTagresourceTool(cfg),
+		tools_x_amz_target_timestream_20181101_describedatabase.CreateDescribedatabaseTool(cfg),
+		tools_x_amz_target_timestream_20181101_writerecords.CreateWriterecordsTool(cfg),
+		tools_x_amz_target_timestream_20181101_createbatchloadtask.CreateCreatebatchloadtaskTool(cfg),
+		tools_x_amz_target_timestream_20181101_deletedatabase.CreateDeletedatabaseTool(cfg),
+		tools_x_amz_target_timestream_20181101_createdatabase.CreateCreatedatabaseTool(cfg),
+		tools_x_amz_target_timestream_20181101_listtagsforresource.CreateListtagsforresourceTool(cfg),
+		tools_x_amz_target_timestream_20181101_describeendpoints.CreateDescribeendpointsTool(cfg),
+	}
+}
